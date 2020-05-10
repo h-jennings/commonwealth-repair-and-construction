@@ -2,11 +2,19 @@
 // TODO: NEED TO ADD COLOR MODIFIERS
 $font-sizes-map: (
   'xsm': var(--fz-xsm),
+  'xsm-display': var(--fz-xsm-display),
   'sm': var(--fz-sm),
+  'sm-display': var(--fz-sm-display),
   'base': var(--fz-base),
+  'base-display': var(--fz-base-display),
   'md': var(--fz-md),
+  'md-display': var(--fz-md-display),
   'lg': var(--fz-lg),
-  'xl': var(--fz-lg),
+  'lg-display': var(--fz-lg-display),
+  'xl': var(--fz-xl),
+  'xl-display': var(--fz-xl-display),
+  'super': var(--fz-super),
+  'super-display': var(--fz-super-display),
 );
 $line-height-map: (
   'sm': var(--lh-sm),

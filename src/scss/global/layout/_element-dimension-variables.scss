@@ -2,4 +2,10 @@
   --nav-height: 89px;
   --layout-container: 1440px;
   --gutter: 160px;
+  @media screen and (max-width: map-get($media-query-map, '04')) {
+    --gutter: 96px;
+  }
+  @media screen and (max-width: map-get($media-query-map, '03')) {
+    --gutter: 64px;
+  }
 }

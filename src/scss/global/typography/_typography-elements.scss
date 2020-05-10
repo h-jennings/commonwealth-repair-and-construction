@@ -88,11 +88,17 @@
 
   p,
   .text-p {
-    font-size: var(--fz-sm);
+    font-size: var(--fz-base);
     font-weight: 400;
     line-height: var(--lh-md);
     &.display {
-      font-size: var(--fz-sm-display);
+      font-size: var(--fz-base-display);
+    }
+    @media screen and (max-width: map-get($media-query-map, '03')) {
+      font-size: var(--fz-sm);
+      &.display {
+        font-size: var(--fz-sm-display);
+      }
     }
   }
 

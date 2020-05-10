@@ -2,4 +2,16 @@
   .border-btm-black {
     border-bottom: 1px solid $black;
   }
+  .border-black-full {
+    position: relative;
+    &::after {
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background-color: $black;
+      position: absolute;
+      content: '';
+    }
+  }
 }
