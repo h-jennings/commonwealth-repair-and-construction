@@ -31,7 +31,7 @@ function Navigation() {
             <a>contact</a>
           </li>
           <li>
-            <button>book a service</button>
+            <button>(804) 307-3653</button>
           </li>
         </ul>
       </div>

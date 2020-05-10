@@ -1,9 +1,20 @@
 // CSS Grid helper classes
 
-// TODO: Need to work with design team to finalize our official grid
 :global {
   .d-grid {
     display: grid;
+
+    .grid-content-primary {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: var(--c-05);
+    }
+    &.grid-gutter-left {
+      grid-template-columns: minmax(var(--gutter), 11.11%) 1fr;
+      > :not(template) {
+        grid-column: 2 / -1;
+      }
+    }
 
     // * Grid Parent Utilities
 

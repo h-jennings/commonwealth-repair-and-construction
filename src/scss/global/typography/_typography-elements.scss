@@ -26,21 +26,21 @@
 
   h1,
   .text-h1 {
-    font-size: var(--fz-xl);
+    font-size: var(--fz-lg);
     font-weight: 500;
     line-height: 1;
     &.display {
-      font-size: var(--fz-xl-display);
+      font-size: var(--fz-lg-display);
     }
   }
 
   h2,
   .text-h2 {
-    font-size: var(--fz-lg);
+    font-size: var(--fz-md);
     font-weight: 400;
     line-height: 1;
     &.display {
-      font-size: var(--fz-lg-display);
+      font-size: var(--fz-md-display);
     }
   }
 
