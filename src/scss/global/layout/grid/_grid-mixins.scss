@@ -1,0 +1,11 @@
+@mixin generateGridUtils($attribute, $separator: '-', $cb: '') {
+  @for $i from 1 through 12 {
+    &#{if($i < 10, #{$separator}0#{$i}, #{$separator}#{$i})} {
+      @if function-exists($cb) {
+        #{$attribute}: call(get-function($cb), $i);
+      } @else {
+        #{$attribute}: $i;
+      }
+    }
+  }
+}

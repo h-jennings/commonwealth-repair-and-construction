@@ -1,0 +1,34 @@
+// * Display-specific utility classes for use throughout the application
+
+:global {
+  .d-hidden {
+    display: none;
+  }
+  .d-block {
+    display: block;
+  }
+  .d-inline-block {
+    display: inline-block;
+  }
+  .d-inline {
+    display: inline;
+  }
+  .d-inline-flex {
+    display: inline-flex;
+  }
+  .d-table {
+    display: table;
+  }
+  .d-table-caption {
+    display: table-caption;
+  }
+  .d-table-cell {
+    display: table-cell;
+  }
+  .d-table-column {
+    display: table-column;
+  }
+  .d-table-column-group {
+    display: table-column-group;
+  }
+}

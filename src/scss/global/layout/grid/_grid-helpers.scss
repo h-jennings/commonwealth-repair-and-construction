@@ -1,0 +1,112 @@
+// CSS Grid helper classes
+
+// TODO: Need to work with design team to finalize our official grid
+:global {
+  .d-grid {
+    display: grid;
+
+    // * Grid Parent Utilities
+
+    // Example output:
+    // .grid-col-01 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
+    &.grid-col {
+      @include generateGridUtils(
+        $attribute: 'grid-template-columns',
+        $cb: setRepeatValue
+      );
+    }
+
+    // Example output:
+    // .grid-row-01 { grid-template-rows: repeat(1, minmax(0, 1fr)) }
+    &.grid-row {
+      @include generateGridUtils(
+        $attribute: 'grid-template-rows',
+        $cb: setRepeatValue
+      );
+    }
+
+    // * Grid Gap Utilities
+    // * Component spacing
+    &.c- {
+      // Example output:
+      // .c-grid-gap-01 { gap: var(--dwr-c-spacing-01) }
+      &grid-gap {
+        @include modifiers($component-spacing-values-map, $attribute: 'gap');
+      }
+      // Example output:
+      // .c-grid-col-gap-01 { column-gap: var(--dwr-c-spacing-01) }
+      &grid-col-gap {
+        @include modifiers(
+          $component-spacing-values-map,
+          $attribute: 'column-gap'
+        );
+      }
+      // Example output:
+      // .c-grid-row-gap-01 { row-gap: var(--dwr-c-spacing-01) }
+      &grid-row-gap {
+        @include modifiers(
+          $component-spacing-values-map,
+          $attribute: 'row-gap'
+        );
+      }
+    }
+    // Layout spacing
+    &.l- {
+      // Example output:
+      // .l-grid-gap-01 { gap: var(--dwr-l-spacing-01) }
+      &grid-gap {
+        @include modifiers($layout-spacing-values-map, $attribute: 'gap');
+      }
+      // Example output:
+      // .l-grid-col-gap-01 { column-gap: var(--dwr-l-spacing-01) }
+      &grid-col-gap {
+        @include modifiers(
+          $layout-spacing-values-map,
+          $attribute: 'column-gap'
+        );
+      }
+      // Example output:
+      // .l-grid-row-gap-01 { row-gap: var(--dwr-l-spacing-01) }
+      &grid-row-gap {
+        @include modifiers($layout-spacing-values-map, $attribute: 'row-gap');
+      }
+    }
+
+    // * Grid Children Utilities
+
+    // Example output:
+    // .col-span-01 { grid-column: span 1 / span 1 }
+    .col-span {
+      @include generateGridUtils($attribute: 'grid-column', $cb: setSpanValue);
+    }
+    // Example output:
+    // .row-span-01 { grid-row: span 1 / span 1 }
+    .row-span {
+      @include generateGridUtils($attribute: 'grid-row', $cb: setSpanValue);
+    }
+
+    // Example output:
+    // .col-start-01 { grid-column-start: 1 }
+    .col-start {
+      @include generateGridUtils($attribute: 'grid-column-start');
+    }
+
+    // Example output:
+    // .col-end-01 { grid-column-end: 1 }
+    .col-end {
+      @include generateGridUtils($attribute: 'grid-column-end');
+    }
+
+    // Example output:
+    // .row-start-01 { grid-row-start: 1 }
+    .row-start {
+      @include generateGridUtils($attribute: 'grid-row-start');
+    }
+
+    // Example output:
+    // .row-end-01 { grid-row-end: 1 }
+    .row-end {
+      @include generateGridUtils($attribute: 'grid-row-end');
+    }
+  }
+}

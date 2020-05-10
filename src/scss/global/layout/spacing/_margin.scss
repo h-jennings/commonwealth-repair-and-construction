@@ -1,0 +1,109 @@
+// * Margin utility classes for use throughout the application
+// TODO: Add example output of mixin calls
+$margin-util-variants: (
+  'm': 'margin',
+  'mt': 'margin-top',
+  'mb': 'margin-bottom',
+  'ml': 'margin-left',
+  'mr': 'margin-right',
+  'mx': (
+    'margin-right',
+    'margin-left',
+  ),
+  'my': (
+    'margin-top',
+    'margin-bottom',
+  ),
+);
+
+// * ~~~~~~~~~~~~~~~~~~~~~~~~
+
+/*
+
+* Component Margin Utilities :
+
+*/
+
+:global {
+  .c {
+    @include generateSpacingUtils(
+      $margin-util-variants,
+      $component-spacing-values-map
+    );
+  }
+
+  // * ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  /*
+  
+  * Layout Margin Utilities :
+  
+  */
+
+  .l {
+    @include generateSpacingUtils(
+      $margin-util-variants,
+      $layout-spacing-values-map
+    );
+  }
+
+  /*
+  
+  * Auto Margin Utilities :
+  
+  */
+
+  .m-auto {
+    margin: auto;
+  }
+  .mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .mr-auto {
+    margin-right: auto;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .mt-auto {
+    margin-top: auto;
+  }
+  .mb-auto {
+    margin-bottom: auto;
+  }
+
+  /*
+  
+  * Zero Margin Utilities :
+  
+  */
+
+  .m-0 {
+    margin: 0;
+  }
+  .mx-0 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .mr-0 {
+    margin-right: 0;
+  }
+  .ml-0 {
+    margin-left: 0;
+  }
+  .mt-0 {
+    margin-top: 0;
+  }
+  .mb-0 {
+    margin-bottom: 0;
+  }
+}

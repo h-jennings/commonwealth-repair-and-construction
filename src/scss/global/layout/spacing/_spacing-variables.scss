@@ -1,0 +1,43 @@
+:root {
+  // * Component Spacing Variables
+  --c-01: #{pxToRem(2px)};
+  --c-02: #{pxToRem(4px)};
+  --c-03: #{pxToRem(8px)};
+  --c-04: #{pxToRem(12px)};
+  --c-05: #{pxToRem(16px)};
+  --c-06: #{pxToRem(24px)};
+  --c-07: #{pxToRem(32px)};
+  --c-08: #{pxToRem(40px)};
+  --c-09: #{pxToRem(48px)};
+
+  // * Layout Spacing Variables
+  --l-01: #{pxToRem(16px)};
+  --l-02: #{pxToRem(24px)};
+  --l-03: #{pxToRem(32px)};
+  --l-04: #{pxToRem(48px)};
+  --l-05: #{pxToRem(64px)};
+  --l-06: #{pxToRem(96px)};
+  --l-07: #{pxToRem(160px)};
+}
+
+$component-spacing-values-map: (
+  '01': var(--c-01),
+  '02': var(--c-02),
+  '03': var(--c-03),
+  '04': var(--c-04),
+  '05': var(--c-05),
+  '06': var(--c-06),
+  '07': var(--c-07),
+  '08': var(--c-08),
+  '09': var(--c-09),
+);
+
+$layout-spacing-values-map: (
+  '01': var(--l-01),
+  '02': var(--l-02),
+  '03': var(--l-03),
+  '04': var(--l-04),
+  '05': var(--l-05),
+  '06': var(--l-06),
+  '07': var(--l-07),
+);

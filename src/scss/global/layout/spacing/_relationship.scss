@@ -1,0 +1,52 @@
+// * Spacing utility classes for parent-child relationships
+
+// * Example output:
+/* 
+
+.c-space-y-01 {
+  * All direct children of the parent have this value applied
+  > :not(template) {
+    margin-bottom: var(--dwr--c-spacing-01);
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+.c-space-x-01 {
+  * All direct children of the parent have this value applied
+  > :not(template) {
+    margin-right: var(--dwr--c-spacing-01);
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+*/
+
+:global {
+  .c-space-y {
+    @include generateRelationshipSpacerUtils(
+      $component-spacing-values-map,
+      $attribute: 'margin-bottom'
+    );
+  }
+  .l-space-y {
+    @include generateRelationshipSpacerUtils(
+      $layout-spacing-values-map,
+      $attribute: 'margin-bottom'
+    );
+  }
+  .c-space-x {
+    @include generateRelationshipSpacerUtils(
+      $component-spacing-values-map,
+      $attribute: 'margin-right'
+    );
+  }
+  .l-space-x {
+    @include generateRelationshipSpacerUtils(
+      $layout-spacing-values-map,
+      $attribute: 'margin-right'
+    );
+  }
+}

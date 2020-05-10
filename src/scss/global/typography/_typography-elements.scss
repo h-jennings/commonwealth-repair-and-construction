@@ -1,0 +1,130 @@
+:global {
+  h1,
+  .text-h1,
+  h2,
+  .text-h2,
+  h3,
+  .text-h3,
+  h4,
+  .text-h4,
+  h5,
+  .text-h5,
+  h6,
+  .text-h6,
+  a,
+  button,
+  p,
+  .text-p {
+    font-family: var(--ff-primary);
+    color: $black;
+    text-align: left;
+    &.display {
+      font-family: var(--ff-display);
+      line-height: 0.9;
+    }
+  }
+
+  h1,
+  .text-h1 {
+    font-size: var(--fz-xl);
+    font-weight: 500;
+    line-height: 1;
+    &.display {
+      font-size: var(--fz-xl-display);
+    }
+  }
+
+  h2,
+  .text-h2 {
+    font-size: var(--fz-lg);
+    font-weight: 400;
+    line-height: 1;
+    &.display {
+      font-size: var(--fz-lg-display);
+    }
+  }
+
+  h3,
+  .text-h3 {
+    font-size: var(--fz-md);
+    font-weight: 400;
+    line-height: var(--lh-base);
+    &.display {
+      font-size: var(--fz-md-display);
+    }
+  }
+
+  h4,
+  .text-h4 {
+    font-size: var(--fz-base);
+    font-weight: 500;
+    line-height: var(--lh-md);
+    &.display {
+      font-size: var(--fz-base-display);
+    }
+  }
+
+  h5,
+  .text-h5 {
+    font-size: var(--fz-sm);
+    font-weight: 700;
+    line-height: var(--lh-sm);
+    &.display {
+      font-size: var(--fz-sm-display);
+    }
+  }
+
+  h6,
+  .text-h6,
+  .text__eyebrow {
+    font-size: var(--fz-xsm);
+    font-weight: 700;
+    line-height: var(--lh-sm);
+    text-transform: uppercase;
+    &.display {
+      font-size: var(--fz-xsm-display);
+    }
+  }
+
+  p,
+  .text-p {
+    font-size: var(--fz-sm);
+    font-weight: 400;
+    line-height: var(--lh-md);
+    &.display {
+      font-size: var(--fz-sm-display);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--fz-sm);
+    line-height: var(--lh-sm);
+    &.display {
+      font-size: var(--fz-sm-display);
+    }
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+      color: $orange;
+    }
+  }
+
+  .button-link,
+  button {
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    color: $black;
+    background-color: $orange;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-size: var(--fz-sm);
+    padding: var(--c-04) var(--c-05);
+    min-width: 140px;
+    cursor: pointer;
+  }
+}

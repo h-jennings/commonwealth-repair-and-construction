@@ -1,0 +1,47 @@
+// * Padding utility classes for use throughout the application
+// TODO: Add example output of mixin calls
+
+$padding-util-variants: (
+  'p': 'padding',
+  'pt': 'padding-top',
+  'pb': 'padding-bottom',
+  'pl': 'padding-left',
+  'pr': 'padding-right',
+  'px': (
+    'padding-right',
+    'padding-left',
+  ),
+  'py': (
+    'padding-top',
+    'padding-bottom',
+  ),
+);
+
+/*
+
+* Component Padding Utilities :
+
+*/
+:global {
+  .c {
+    @include generateSpacingUtils(
+      $padding-util-variants,
+      $component-spacing-values-map
+    );
+  }
+
+  // * ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  /*
+
+* Layout Padding Utilities :
+
+*/
+
+  .l {
+    @include generateSpacingUtils(
+      $padding-util-variants,
+      $layout-spacing-values-map
+    );
+  }
+}

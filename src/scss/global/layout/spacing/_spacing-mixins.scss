@@ -1,0 +1,44 @@
+@mixin generateSpacingUtils($utilMap, $spacingValMap, $separator: '-') {
+  // Looping over each utility variant (margin, padding, etc..)
+  @each $utilMapKey, $mapValue in $utilMap {
+    // Setting the class name to include the correct
+    // directional prefix (mb, mt...)
+    // * ex: .c-mb...
+    &#{$separator}#{$utilMapKey} {
+      // Checking if directional prefix includes multiple values
+      // ex: 'mx' contains both margin-left _and_ margin-right
+      @if type-of($mapValue) == 'list' {
+        @each $spacingValKey, $spacingVal in $spacingValMap {
+          // Creating class name extension for each utility
+          &#{$separator}#{$spacingValKey} {
+            // * Looping over and returning a declaration for both
+            // * values in the utilMap
+            @each $attribute in $mapValue {
+              #{$attribute}: $spacingVal;
+            }
+          }
+        }
+      } @else {
+        @each $spacingValKey, $spacingVal in $spacingValMap {
+          // Creating class name extension for each utility
+          &#{$separator}#{$spacingValKey} {
+            #{$mapValue}: $spacingVal;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin generateRelationshipSpacerUtils($map, $attribute, $separator: '-') {
+  @each $key, $val in $map {
+    &#{$separator}#{$key} {
+      > :not(template) {
+        #{$attribute}: $val;
+      }
+      > :last-child {
+        #{$attribute}: 0;
+      }
+    }
+  }
+}

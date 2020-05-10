@@ -1,0 +1,6 @@
+@function setSpanValue($value) {
+  @return #{span #{$value} / span #{$value}};
+}
+@function setRepeatValue($value) {
+  @return #{repeat(#{$value}, minmax(0, 1fr))};
+}

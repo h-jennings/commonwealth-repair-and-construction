@@ -1,0 +1,15 @@
+@import '@/scss/global/color/_color-variables.scss';
+
+.hero {
+  height: calc(80vh - var(--nav-height));
+  min-height: 480px;
+  background: linear-gradient(rgba(14, 13, 16, 0.5), rgba(14, 13, 16, 0.5)),
+    url('../../../../images/man-welding.jpg');
+  background-size: cover;
+}
+.heroContainer {
+  max-width: var(--layout-container);
+}
+h1.headline {
+  color: $white;
+}

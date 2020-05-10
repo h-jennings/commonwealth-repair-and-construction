@@ -1,0 +1,80 @@
+// Typography helpers
+// TODO: NEED TO ADD COLOR MODIFIERS
+$font-sizes-map: (
+  'xsm': var(--fz-xsm),
+  'sm': var(--fz-sm),
+  'base': var(--fz-base),
+  'md': var(--fz-md),
+  'lg': var(--fz-lg),
+  'xl': var(--fz-lg),
+);
+$line-height-map: (
+  'sm': var(--lh-sm),
+  'base': var(--lh-base),
+  'md': var(--lh-md),
+);
+$font-weights-map: (
+  'thin': 100,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'bold': 700,
+  'black': 900,
+);
+$text-decoration-map: (
+  'underline': underline,
+  'line-through': line-through,
+  'no-underline': none,
+);
+$font-style-map: (
+  'italic': italic,
+  'no-italic': normal,
+);
+$text-alignment-map: (
+  'left': left,
+  'center': center,
+  'right': right,
+  'justify': justify,
+);
+$text-transformations-map: (
+  'uppercase': uppercase,
+  'lowercase': lowercase,
+  'capitalize': capitalize,
+  'normal-case': none,
+);
+$font-families-map: (
+  'primary': (
+    'Basier Circle',
+    sans-serif,
+  ),
+  'display': (
+    'Bajern',
+    sans-serif,
+  ),
+);
+:global {
+  .font {
+    // * Font Sizes
+    @include modifiers($font-sizes-map, $attribute: 'font-size');
+    // * Font Families
+    @include modifiers($font-families-map, $attribute: 'font-family');
+  }
+  // * Line Height
+  .leading {
+    @include modifiers($line-height-map, $attribute: 'line-height');
+  }
+  .font {
+    // * Font Weights
+    @include modifiers($font-weights-map, $attribute: 'font-weight');
+    // * Font Style
+    @include modifiers($font-style-map, $attribute: 'font-style');
+  }
+  .text {
+    // * Text Decoration
+    @include modifiers($text-decoration-map, $attribute: 'text-decoration');
+    // * Text Alignment
+    @include modifiers($text-alignment-map, $attribute: 'text-align');
+    // * Text Transformations
+    @include modifiers($text-transformations-map, $attribute: 'text-transform');
+  }
+}

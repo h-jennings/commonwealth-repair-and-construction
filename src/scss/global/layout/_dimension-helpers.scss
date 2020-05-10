@@ -1,0 +1,17 @@
+:global {
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vh;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .max-w-layout {
+    max-width: var(--layout-container);
+  }
+}

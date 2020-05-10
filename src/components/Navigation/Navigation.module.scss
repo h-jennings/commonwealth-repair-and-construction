@@ -1,0 +1,16 @@
+.container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: minmax(auto, 1680px) minmax(
+      var(--right-gutter),
+      11.11%
+    );
+}
+
+.content {
+  column-span: 1 / 2;
+}
+
+.logoWrapper {
+  width: 230px;
+}

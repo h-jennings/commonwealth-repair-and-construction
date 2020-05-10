@@ -1,0 +1,15 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(auto, 1680px) minmax(
+      var(--right-gutter),
+      11.11%
+    );
+  grid-template-rows: 1fr min-content;
+  > :not(template) {
+    grid-column: 1 / 2;
+  }
+}
+.pageContent {
+  margin-top: var(--nav-height);
+}

@@ -1,0 +1,29 @@
+// Variables
+:root {
+  font-size: 16px;
+  // Font family
+  --ff-primary: 'Basier Circle', sans-serif;
+  --ff-display: 'Bajern', sans-serif;
+
+  // Font sizes
+  --fz-xsm: #{pxToRem(8px)};
+  --fz-xsm-display: #{pxToRem(12px)};
+  --fz-sm: #{pxToRem(16px)};
+  --fz-sm-display: #{pxToRem(25px)};
+  --fz-base: #{pxToRem(22px)};
+  --fz-base-display: #{pxToRem(34px)};
+  --fz-md: #{pxToRem(32px)};
+  --fz-md-display: #{pxToRem(50px)};
+  --fz-lg: #{pxToRem(45px)};
+  --fz-lg-display: #{pxToRem(70px)};
+  --fz-xl: #{pxToRem(64px)};
+  --fz-xl-display: #{pxToRem(100px)};
+  --fz-super: #{pxToRem(90px)};
+  --fz-super-display: #{pxToRem(140px)};
+
+  // Line height
+  --lh-display: 0.8;
+  --lh-sm: 1.2;
+  --lh-base: 1.33;
+  --lh-md: 1.5;
+}

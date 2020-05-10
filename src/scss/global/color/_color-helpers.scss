@@ -1,0 +1,8 @@
+:global {
+  .text {
+    @include modifiers($core-color-map, $attribute: 'color');
+  }
+  .bg {
+    @include modifiers($core-color-map, $attribute: 'background-color');
+  }
+}

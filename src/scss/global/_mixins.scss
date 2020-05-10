@@ -1,0 +1,12 @@
+// * Property-agnostic utility class generator
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-') {
+  @each $key, $value in $map {
+    &#{$prefix}#{$key} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $separator);
+      } @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
