@@ -29,9 +29,10 @@
     font-size: var(--fz-lg);
     font-weight: 500;
     line-height: 1;
-    &.display {
-      font-size: var(--fz-lg-display);
-    }
+  }
+
+  .text-h1-display {
+    font-size: var(--fz-lg-display);
   }
 
   h2,
@@ -39,9 +40,10 @@
     font-size: var(--fz-md);
     font-weight: 400;
     line-height: 1;
-    &.display {
-      font-size: var(--fz-md-display);
-    }
+  }
+
+  .text-h2-display {
+    font-size: var(--fz-md-display);
   }
 
   h3,
@@ -49,9 +51,10 @@
     font-size: var(--fz-md);
     font-weight: 400;
     line-height: var(--lh-base);
-    &.display {
-      font-size: var(--fz-md-display);
-    }
+  }
+
+  .text-h3-display {
+    font-size: var(--fz-md-display);
   }
 
   h4,
@@ -59,9 +62,10 @@
     font-size: var(--fz-base);
     font-weight: 500;
     line-height: var(--lh-md);
-    &.display {
-      font-size: var(--fz-base-display);
-    }
+  }
+
+  .text-h4-display {
+    font-size: var(--fz-base-display);
   }
 
   h5,
@@ -69,9 +73,9 @@
     font-size: var(--fz-sm);
     font-weight: 700;
     line-height: var(--lh-sm);
-    &.display {
-      font-size: var(--fz-sm-display);
-    }
+  }
+  .text-h5-display {
+    font-size: var(--fz-sm-display);
   }
 
   h6,
@@ -81,9 +85,9 @@
     font-weight: 700;
     line-height: var(--lh-sm);
     text-transform: uppercase;
-    &.display {
-      font-size: var(--fz-xsm-display);
-    }
+  }
+  .text-h6-display {
+    font-size: var(--fz-xsm-display);
   }
 
   p,
@@ -96,10 +100,11 @@
     }
     @media screen and (max-width: map-get($media-query-map, '03')) {
       font-size: var(--fz-sm);
-      &.display {
-        font-size: var(--fz-sm-display);
-      }
     }
+  }
+
+  .text-p-display {
+    font-size: var(--fz-sm-display);
   }
 
   a {

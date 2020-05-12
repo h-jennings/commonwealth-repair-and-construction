@@ -7,8 +7,20 @@ export const Services = () => {
   return (
     <Section border={true}>
       <section className={classnames(['l-pb-07', 'l-pt-05'])}>
-        <h1 className={classnames(['display', 'c-mb-09'])}>Services</h1>
-        <h2 className={classnames(['display', 'font-base-display', 'c-mb-05'])}>
+        <h1
+          className={classnames([
+            'text-h1-display',
+            'font-display',
+            'c-mb-09',
+          ])}>
+          Services
+        </h1>
+        <h2
+          className={classnames([
+            'font-display',
+            'font-base-display',
+            'c-mb-05',
+          ])}>
           what we do
         </h2>
         <main className={classnames(['d-grid', 'grid-content-primary'])}>

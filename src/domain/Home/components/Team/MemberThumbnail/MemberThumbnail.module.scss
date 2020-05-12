@@ -1,7 +1,31 @@
+@import '@/scss/global/color/_color-variables.scss';
+
+.container {
+  grid-template-columns: min-content 1fr;
+}
 .role {
   line-height: 1;
 }
 .thumbnail {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 127%;
+}
+.imageContainer {
   background-color: black;
-  height: 363px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(100%);
+}
+.nameBlock {
+  background-color: $white;
+  width: 60%;
+  max-width: 175px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

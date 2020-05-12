@@ -8,7 +8,13 @@ export const Hero = () => {
     <header className={classnames([styles.hero])}>
       <Section border={false}>
         <div className={classnames(['l-py-06'])}>
-          <h1 className={classnames(['c-mb-06', 'display', styles.headline])}>
+          <h1
+            className={classnames([
+              'c-mb-06',
+              'font-display',
+              'text-h1-display',
+              styles.headline,
+            ])}>
             We provide quality
             <br /> services that empower
             <br /> people.
