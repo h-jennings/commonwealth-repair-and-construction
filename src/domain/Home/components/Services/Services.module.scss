@@ -1,7 +1,7 @@
 @import '../../../../scss/global/layout/media-queries';
 
 div.col {
-  @media screen and (max-width: map-get($media-query-map, '03')) {
+  @media screen and (max-width: map-get($media-query-map, '04')) {
     grid-column-start: 1;
     grid-column: 1 / 10;
   }

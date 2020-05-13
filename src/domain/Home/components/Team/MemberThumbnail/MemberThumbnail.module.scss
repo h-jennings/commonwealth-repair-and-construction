@@ -1,7 +1,7 @@
 @import '@/scss/global/color/_color-variables.scss';
 
 .container {
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: min-content minmax(auto, 350px);
 }
 .role {
   line-height: 1;
@@ -11,6 +11,7 @@
   height: 0;
   position: relative;
   padding-top: 127%;
+  min-width: 284px;
 }
 .imageContainer {
   background-color: black;
@@ -28,4 +29,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.bio {
+  border-left: 2px solid $orange;
 }

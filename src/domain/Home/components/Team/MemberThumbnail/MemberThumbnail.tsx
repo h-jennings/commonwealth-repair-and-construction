@@ -30,7 +30,7 @@ export const MemberThumbnail = ({ src, text }: TMemberThumbnail) => {
         {text.role}
       </h2>
       <div>
-        <div className={styles.thumbnail}>
+        <div className={classnames(['c-mb-06', styles.thumbnail])}>
           <div
             className={styles.imageContainer}
             style={{
@@ -54,11 +54,8 @@ export const MemberThumbnail = ({ src, text }: TMemberThumbnail) => {
             </h3>
           </div>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, aut
-          quibusdam corporis in voluptatibus quaerat cupiditate fuga dolorem
-          ipsam numquam est expedita quia, iste ad architecto illum dolorum
-          nostrum itaque.
+        <p className={classnames(['font-sm', 'c-pl-04', styles.bio])}>
+          {text.bio}
         </p>
       </div>
     </figure>

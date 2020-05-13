@@ -98,7 +98,7 @@
     &.display {
       font-size: var(--fz-base-display);
     }
-    @media screen and (max-width: map-get($media-query-map, '03')) {
+    @media screen and (max-width: map-get($media-query-map, '04')) {
       font-size: var(--fz-sm);
     }
   }

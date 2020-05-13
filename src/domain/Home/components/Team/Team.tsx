@@ -9,21 +9,37 @@ export const Team = () => {
   return (
     <Section border={true}>
       <section className={classnames(['l-pt-06', 'l-pb-07'])}>
-        <h1 className={classnames(['font-display', 'text-h1-display'])}>
+        <h1
+          className={classnames([
+            'font-display',
+            'text-h1-display',
+            'l-mb-04',
+          ])}>
           team
         </h1>
         <div
           className={classnames([
-            'd-grid',
-            'grid-content-primary',
+            'd-flex',
+            'l-space-x-05',
             styles.thumbnailContainer,
           ])}>
-          <div className='col-span-04'>
+          <div>
             <MemberThumbnail
               text={{
                 bio:
-                  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                 name: 'Evan Jennings',
+                role: 'co-founder',
+              }}
+              src={evan}
+            />
+          </div>
+          <div>
+            <MemberThumbnail
+              text={{
+                bio:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                name: 'Trenton Williams',
                 role: 'co-founder',
               }}
               src={evan}

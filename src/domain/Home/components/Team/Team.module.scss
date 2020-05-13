@@ -1,3 +1,20 @@
+@import '@/scss/global/layout/_media-queries.scss';
+
 .thumbnailContainer {
   color: black;
+}
+
+@media screen and (max-width: map-get($media-query-map, '03')) {
+  div.thumbnailContainer {
+    flex-flow: column nowrap;
+    align-items: center;
+
+    > :not(template) {
+      margin: 0;
+
+      &:first-of-type {
+        margin-bottom: var(--l-05);
+      }
+    }
+  }
 }
