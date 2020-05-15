@@ -7,11 +7,9 @@ import { Team } from './components/Team/Team';
 function Home() {
   return (
     <Layout>
-      <>
-        <Hero />
-        <Services />
-        <Team />
-      </>
+      <Hero />
+      <Services />
+      <Team />
     </Layout>
   );
 }

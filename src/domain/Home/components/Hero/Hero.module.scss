@@ -10,3 +10,6 @@
 h1.headline {
   color: $white;
 }
+.content {
+  padding-right: var(--gutter);
+}

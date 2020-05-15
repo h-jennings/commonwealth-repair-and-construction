@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <header className={classnames([styles.hero])}>
       <Section border={false}>
-        <div className={classnames(['l-py-06'])}>
+        <div className={classnames(['l-py-06', styles.content])}>
           <h1
             className={classnames([
               'c-mb-06',
@@ -16,13 +16,14 @@ export const Hero = () => {
               styles.headline,
             ])}>
             We provide quality
-            <br /> services that empower
-            <br /> people.
+            <br className='sm-d-hidden' /> services that empower
+            <br className='sm-d-hidden' /> people.
           </h1>
           <p className={classnames(['text-white'])}>
             Founded by two lifetime craftsmen, commonwealth repair
-            <br /> and construction is the trusted source to call when
-            <br /> you want things done right.
+            <br className='sm-d-hidden' /> and construction is the trusted
+            source to call when
+            <br className='sm-d-hidden' /> you want things done right.
           </p>
         </div>
       </Section>

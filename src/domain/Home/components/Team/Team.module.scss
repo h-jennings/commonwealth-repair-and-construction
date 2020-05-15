@@ -4,7 +4,7 @@
   color: black;
 }
 
-@media screen and (max-width: map-get($media-query-map, '03')) {
+@include breakpoint(md) {
   div.thumbnailContainer {
     flex-flow: column nowrap;
     align-items: center;

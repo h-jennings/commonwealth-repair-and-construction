@@ -66,16 +66,64 @@ $font-families-map: (
     @include modifiers($font-sizes-map, $attribute: 'font-size');
     // * Font Families
     @include modifiers($font-families-map, $attribute: 'font-family');
-  }
-  // * Line Height
-  .leading {
-    @include modifiers($line-height-map, $attribute: 'line-height');
-  }
-  .font {
     // * Font Weights
     @include modifiers($font-weights-map, $attribute: 'font-weight');
     // * Font Style
     @include modifiers($font-style-map, $attribute: 'font-style');
+  }
+  // Responsive Font Helpers (non-exhaustive)
+  @include breakpoint(xsm) {
+    .xsm-font {
+      // * Font Sizes
+      @include modifiers($font-sizes-map, $attribute: 'font-size');
+      // * Font Weights
+      @include modifiers($font-weights-map, $attribute: 'font-weight');
+    }
+  }
+  @include breakpoint(sm) {
+    .sm-font {
+      // * Font Sizes
+      @include modifiers($font-sizes-map, $attribute: 'font-size');
+      // * Font Weights
+      @include modifiers($font-weights-map, $attribute: 'font-weight');
+    }
+  }
+  @include breakpoint(md) {
+    .md-font {
+      // * Font Sizes
+      @include modifiers($font-sizes-map, $attribute: 'font-size');
+      // * Font Weights
+      @include modifiers($font-weights-map, $attribute: 'font-weight');
+    }
+  }
+  @include breakpoint(lg) {
+    .lg-font {
+      // * Font Sizes
+      @include modifiers($font-sizes-map, $attribute: 'font-size');
+      // * Font Weights
+      @include modifiers($font-weights-map, $attribute: 'font-weight');
+    }
+  }
+  @include breakpoint(xl) {
+    .xl-font {
+      // * Font Sizes
+      @include modifiers($font-sizes-map, $attribute: 'font-size');
+      // * Font Weights
+      @include modifiers($font-weights-map, $attribute: 'font-weight');
+    }
+  }
+  @include breakpoint(xxl) {
+    .xxl-font {
+      // * Font Sizes
+      @include modifiers($font-sizes-map, $attribute: 'font-size');
+      // * Font Weights
+      @include modifiers($font-weights-map, $attribute: 'font-weight');
+    }
+  }
+
+  // * Line Height
+  .leading {
+    @include modifiers($line-height-map, $attribute: 'line-height');
   }
   .text {
     // * Text Decoration

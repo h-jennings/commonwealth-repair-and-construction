@@ -2,10 +2,10 @@
   --nav-height: 89px;
   --layout-container: 1440px;
   --gutter: 160px;
-  @media screen and (max-width: map-get($media-query-map, '05')) {
+  @include breakpoint(xl) {
     --gutter: 96px;
   }
-  @media screen and (max-width: map-get($media-query-map, '04')) {
+  @include breakpoint(lg) {
     --gutter: 64px;
   }
 }

@@ -1,8 +1,19 @@
 $media-query-map: (
-  '01': 375px,
-  '02': 768px,
-  '03': 930px,
-  '04': 1024px,
-  '05': 1440px,
-  '06': 1680px,
+  'xsm': 375px,
+  'sm': 768px,
+  'md': 930px,
+  'lg': 1024px,
+  'xl': 1440px,
+  'xxl': 1680px,
 );
+
+// * Media query generator
+@mixin breakpoint($value) {
+  @if map-has-key($media-query-map, $value) {
+    @media screen and (max-width: map-get($media-query-map, $value)) {
+      @content;
+    }
+  } @else {
+    @error "Make sure you're using a key from $media-query-map";
+  }
+}
