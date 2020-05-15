@@ -1,5 +1,4 @@
 // Typography helpers
-// TODO: NEED TO ADD COLOR MODIFIERS
 $font-sizes-map: (
   'xsm': var(--fz-xsm),
   'xsm-display': var(--fz-xsm-display),
@@ -71,53 +70,45 @@ $font-families-map: (
     // * Font Style
     @include modifiers($font-style-map, $attribute: 'font-style');
   }
+
   // Responsive Font Helpers (non-exhaustive)
+  // selecting only styles that are likely to
+  // change with breakpoints
+
   @include breakpoint(xsm) {
-    .xsm-font {
+    .xsm\:font {
       // * Font Sizes
       @include modifiers($font-sizes-map, $attribute: 'font-size');
-      // * Font Weights
-      @include modifiers($font-weights-map, $attribute: 'font-weight');
     }
   }
   @include breakpoint(sm) {
-    .sm-font {
+    .sm\:font {
       // * Font Sizes
       @include modifiers($font-sizes-map, $attribute: 'font-size');
-      // * Font Weights
-      @include modifiers($font-weights-map, $attribute: 'font-weight');
     }
   }
   @include breakpoint(md) {
-    .md-font {
+    .md\:font {
       // * Font Sizes
       @include modifiers($font-sizes-map, $attribute: 'font-size');
-      // * Font Weights
-      @include modifiers($font-weights-map, $attribute: 'font-weight');
     }
   }
   @include breakpoint(lg) {
-    .lg-font {
+    .lg\:font {
       // * Font Sizes
       @include modifiers($font-sizes-map, $attribute: 'font-size');
-      // * Font Weights
-      @include modifiers($font-weights-map, $attribute: 'font-weight');
     }
   }
   @include breakpoint(xl) {
-    .xl-font {
+    .xl\:font {
       // * Font Sizes
       @include modifiers($font-sizes-map, $attribute: 'font-size');
-      // * Font Weights
-      @include modifiers($font-weights-map, $attribute: 'font-weight');
     }
   }
   @include breakpoint(xxl) {
-    .xxl-font {
+    .xxl\:font {
       // * Font Sizes
       @include modifiers($font-sizes-map, $attribute: 'font-size');
-      // * Font Weights
-      @include modifiers($font-weights-map, $attribute: 'font-weight');
     }
   }
 
@@ -132,5 +123,46 @@ $font-families-map: (
     @include modifiers($text-alignment-map, $attribute: 'text-align');
     // * Text Transformations
     @include modifiers($text-transformations-map, $attribute: 'text-transform');
+  }
+
+  // Responsive Text Helpers (non-exhaustive)
+  // selecting only styles that are likely to
+  // change with breakpoints
+
+  @include breakpoint(xsm) {
+    .xsm\:text {
+      // * Text Alignment
+      @include modifiers($text-alignment-map, $attribute: 'text-align');
+    }
+  }
+  @include breakpoint(sm) {
+    .sm\:text {
+      // * Text Alignment
+      @include modifiers($text-alignment-map, $attribute: 'text-align');
+    }
+  }
+  @include breakpoint(md) {
+    .md\:text {
+      // * Text Alignment
+      @include modifiers($text-alignment-map, $attribute: 'text-align');
+    }
+  }
+  @include breakpoint(lg) {
+    .lg\:text {
+      // * Text Alignment
+      @include modifiers($text-alignment-map, $attribute: 'text-align');
+    }
+  }
+  @include breakpoint(xl) {
+    .xl\:text {
+      // * Text Alignment
+      @include modifiers($text-alignment-map, $attribute: 'text-align');
+    }
+  }
+  @include breakpoint(xxl) {
+    .xxl\:text {
+      // * Text Alignment
+      @include modifiers($text-alignment-map, $attribute: 'text-align');
+    }
   }
 }

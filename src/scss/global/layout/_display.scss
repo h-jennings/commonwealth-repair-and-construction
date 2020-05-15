@@ -5,32 +5,32 @@
     display: none;
   }
   @include breakpoint(xsm) {
-    .xsm-d-hidden {
+    .xsm\:d-hidden {
       display: none;
     }
   }
   @include breakpoint(sm) {
-    .sm-d-hidden {
+    .sm\:d-hidden {
       display: none;
     }
   }
   @include breakpoint(md) {
-    .md-d-hidden {
+    .md\:d-hidden {
       display: none;
     }
   }
   @include breakpoint(lg) {
-    .lg-d-hidden {
+    .lg\:d-hidden {
       display: none;
     }
   }
   @include breakpoint(xl) {
-    .xl-d-hidden {
+    .xl\:d-hidden {
       display: none;
     }
   }
   @include breakpoint(xxl) {
-    .xxl-d-hidden {
+    .xxl\:d-hidden {
       display: none;
     }
   }

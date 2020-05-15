@@ -13,17 +13,18 @@ export const Hero = () => {
               'c-mb-06',
               'font-display',
               'text-h1-display',
+              'sm:font-md-display',
               styles.headline,
             ])}>
             We provide quality
-            <br className='sm-d-hidden' /> services that empower
-            <br className='sm-d-hidden' /> people.
+            <br className='sm:d-hidden' /> services that empower
+            <br className='sm:d-hidden' /> people.
           </h1>
-          <p className={classnames(['text-white'])}>
+          <p className={classnames(['text-white', 'sm:font-sm'])}>
             Founded by two lifetime craftsmen, commonwealth repair
-            <br className='sm-d-hidden' /> and construction is the trusted
+            <br className='sm:d-hidden' /> and construction is the trusted
             source to call when
-            <br className='sm-d-hidden' /> you want things done right.
+            <br className='sm:d-hidden' /> you want things done right.
           </p>
         </div>
       </Section>
