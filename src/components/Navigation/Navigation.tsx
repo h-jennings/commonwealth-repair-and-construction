@@ -4,8 +4,11 @@ import classnames from 'classnames';
 import styles from './Navigation.module.scss';
 import { Logo } from '../Logo/Logo';
 import { MobileMenu } from './MobileMenu/MobileMenu';
+import { DesktopMenu } from './DesktopMenu/DesktopMenu';
 
 export const Navigation = () => {
+  const breakpoint = '(max-width: 930px)';
+
   return (
     <nav className={classnames(['w-full', 'bg-white', styles.container])}>
       <div
@@ -24,32 +27,12 @@ export const Navigation = () => {
         <div className={classnames([styles.logoWrapper])}>
           <Logo />
         </div>
-        <ul
-          className={classnames([
-            'c-space-x-05',
-            'd-flex',
-            'items-center',
-            'md:d-hidden',
-          ])}>
-          <li>
-            <a>services</a>
-          </li>
-          <li>
-            <a>about</a>
-          </li>
-          <li>
-            <a>contact</a>
-          </li>
-          <li>
-            <button>(804) 307-3653</button>
-          </li>
-        </ul>
         <Media
           queries={{
-            mobile: '(max-width: 768px)',
+            mobile: breakpoint,
           }}>
           {(matches) => {
-            return <>{matches.mobile && <MobileMenu />}</>;
+            return <>{matches.mobile ? <MobileMenu /> : <DesktopMenu />}</>;
           }}
         </Media>
       </div>
