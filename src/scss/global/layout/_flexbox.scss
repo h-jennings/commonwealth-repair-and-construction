@@ -1,8 +1,6 @@
 // Flexbox helper classes
 :global {
   .d-flex {
-    display: flex;
-
     &.centered {
       justify-content: center;
       align-items: center;

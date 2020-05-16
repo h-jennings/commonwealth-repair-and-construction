@@ -1,10 +1,14 @@
 @import '@/scss/global/color/_color-variables.scss';
+@import '@/scss/global/layout/_media-queries.scss';
 
 .container {
   grid-template-columns: min-content minmax(auto, 350px);
 }
 .role {
   line-height: 1;
+  @include breakpoint(sm) {
+    grid-column: 1 / -1;
+  }
 }
 .thumbnail {
   width: 100%;

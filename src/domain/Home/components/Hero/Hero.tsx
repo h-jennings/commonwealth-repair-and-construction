@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <header className={classnames([styles.hero])}>
       <Section border={false}>
-        <div className={classnames(['l-py-06', styles.content])}>
+        <div className={classnames(['l-py-06', 'md:l-py-04', styles.content])}>
           <h1
             className={classnames([
               'c-mb-06',

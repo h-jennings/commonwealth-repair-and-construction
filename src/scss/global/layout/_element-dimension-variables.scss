@@ -8,4 +8,13 @@
   @include breakpoint(lg) {
     --gutter: 64px;
   }
+  @include breakpoint(md) {
+    --gutter: 48px;
+  }
+  @include breakpoint(sm) {
+    --nav-height: 64px;
+  }
+  @include breakpoint(xsm) {
+    --gutter: 32px;
+  }
 }

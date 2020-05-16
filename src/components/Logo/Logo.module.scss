@@ -1,13 +1,35 @@
+@import '@/scss/global/layout/_media-queries.scss';
+
 .container {
   position: relative;
   height: 0;
   width: 100%;
   padding-top: 15.65%;
 }
-.logo {
+.logoFull {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+}
+.logoSmall {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@include breakpoint(sm) {
+  .container {
+    padding-top: 100%;
+  }
+  .logoFull {
+    display: none;
+  }
+  .logoSmall {
+    display: block;
+  }
 }

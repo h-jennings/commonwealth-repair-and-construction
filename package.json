@@ -5,6 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "mobile:dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js --host 0.0.0.0",
     "start": "npm run dev",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -50,10 +51,10 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-custom-properties": "^9.0.2",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
+    "purgecss-webpack-plugin": "^2.2.0",
     "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.2",
@@ -69,8 +70,10 @@
   },
   "dependencies": {
     "dotenv-webpack": "^1.7.0",
+    "glob": "^7.1.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-media": "^1.10.0",
     "react-router-dom": "^5.1.2"
   }
 }

@@ -1,7 +1,9 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const glob = require('glob');
 const paths = require('./paths');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 // Processing TS files
 const configureTSLoader = () => ({

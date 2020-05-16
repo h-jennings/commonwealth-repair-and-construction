@@ -1,6 +1,5 @@
 // * Padding utility classes for use throughout the application
-// TODO: Add example output of mixin calls
-
+// TODO: Create responsive classes
 $padding-util-variants: (
   'p': 'padding',
   'pt': 'padding-top',
@@ -43,5 +42,92 @@ $padding-util-variants: (
       $padding-util-variants,
       $layout-spacing-values-map
     );
+  }
+
+  // * Responsive Padding Utilities
+
+  @include breakpoint(xsm) {
+    .xsm\:c {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .xsm\:l {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $layout-spacing-values-map
+      );
+    }
+  }
+  @include breakpoint(sm) {
+    .sm\:c {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .sm\:l {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $layout-spacing-values-map
+      );
+    }
+  }
+  @include breakpoint(md) {
+    .md\:c {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .md\:l {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $layout-spacing-values-map
+      );
+    }
+  }
+  @include breakpoint(lg) {
+    .lg\:c {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .lg\:l {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $layout-spacing-values-map
+      );
+    }
+  }
+  @include breakpoint(xl) {
+    .xl\:c {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .xl\:l {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $layout-spacing-values-map
+      );
+    }
+  }
+  @include breakpoint(xxl) {
+    .xxl\:c {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .xxl\:l {
+      @include generateSpacingUtils(
+        $padding-util-variants,
+        $layout-spacing-values-map
+      );
+    }
   }
 }

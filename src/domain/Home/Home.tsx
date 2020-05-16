@@ -4,7 +4,7 @@ import { Services } from './components/Services/Services';
 import { Layout } from '@/components/Layout/Layout';
 import { Team } from './components/Team/Team';
 
-function Home() {
+export const Home = () => {
   return (
     <Layout>
       <Hero />
@@ -12,6 +12,4 @@ function Home() {
       <Team />
     </Layout>
   );
-}
-
-export default Home;
+};

@@ -19,10 +19,11 @@ export const MemberThumbnail = ({ src, text }: TMemberThumbnail) => {
 
   return (
     <figure
-      className={classnames(['d-grid', 'c-grid-col-gap-05', styles.container])}>
+      className={classnames(['d-grid', 'c-grid-gap-05', styles.container])}>
       <h2
         className={classnames([
           'text-right',
+          'sm:text-left',
           'font-bold',
           'font-sm',
           styles.role,
