@@ -6,7 +6,13 @@ import { Section } from '@/components/Section/Section';
 export const Services = () => {
   return (
     <Section border={true}>
-      <section className={classnames(['l-pb-07', 'l-pt-05'])}>
+      <section
+        className={classnames([
+          'l-pb-07',
+          'sm:l-pb-06',
+          'l-pt-05',
+          'sm:l-pt-04',
+        ])}>
         <h1
           className={classnames([
             'text-h1-display',
@@ -23,9 +29,16 @@ export const Services = () => {
           ])}>
           what we do
         </h2>
-        <main className={classnames(['d-grid', 'grid-content-primary'])}>
+        <main
+          className={classnames([
+            'd-grid',
+            'sm:d-block',
+            'grid-content-primary',
+          ])}>
           <div className={classnames(['col-span-05', styles.col])}>
-            <div style={{ height: '40px' }} className='bg-orange'></div>
+            <div
+              style={{ height: '40px', maxWidth: '458px' }}
+              className='bg-orange'></div>
           </div>
           <div
             className={classnames(['col-span-06', 'col-start-07', styles.col])}>

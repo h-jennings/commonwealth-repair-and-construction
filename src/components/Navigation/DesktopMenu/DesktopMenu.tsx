@@ -10,7 +10,7 @@ export const DesktopMenu = () => {
         <a>services</a>
       </li>
       <li>
-        <a>about</a>
+        <a>team</a>
       </li>
       <li>
         <a>contact</a>

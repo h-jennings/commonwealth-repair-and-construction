@@ -1,9 +1,9 @@
-import React, { ReactElement } from 'react';
+import React, { ReactNode } from 'react';
 import classnames from 'classnames';
 import styles from './Section.module.scss';
 
 type TSection = {
-  children?: ReactElement;
+  children?: ReactNode;
   border?: boolean;
 };
 

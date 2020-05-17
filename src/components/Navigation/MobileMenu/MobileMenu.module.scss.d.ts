@@ -3,6 +3,8 @@
 interface CssExports {
   'menuButton': string;
   'menuButtonWrapper': string;
+  'mobileMenuItem': string;
+  'mobileMenuList': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

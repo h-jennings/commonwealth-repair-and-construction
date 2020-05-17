@@ -1,3 +1,7 @@
+@import '@/scss/global/layout/_media-queries.scss';
+
 .section {
-  color: #000000;
+  @include breakpoint(sm) {
+    padding-right: var(--gutter);
+  }
 }

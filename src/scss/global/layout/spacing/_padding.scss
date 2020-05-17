@@ -59,6 +59,9 @@ $padding-util-variants: (
         $layout-spacing-values-map
       );
     }
+    .xsm\:p-0 {
+      padding: 0;
+    }
   }
   @include breakpoint(sm) {
     .sm\:c {
@@ -72,6 +75,9 @@ $padding-util-variants: (
         $padding-util-variants,
         $layout-spacing-values-map
       );
+    }
+    .sm\:p-0 {
+      padding: 0;
     }
   }
   @include breakpoint(md) {
@@ -87,6 +93,9 @@ $padding-util-variants: (
         $layout-spacing-values-map
       );
     }
+    .md\:p-0 {
+      padding: 0;
+    }
   }
   @include breakpoint(lg) {
     .lg\:c {
@@ -100,6 +109,9 @@ $padding-util-variants: (
         $padding-util-variants,
         $layout-spacing-values-map
       );
+    }
+    .lg\:p-0 {
+      padding: 0;
     }
   }
   @include breakpoint(xl) {
@@ -115,6 +127,9 @@ $padding-util-variants: (
         $layout-spacing-values-map
       );
     }
+    .xl\:p-0 {
+      padding: 0;
+    }
   }
   @include breakpoint(xxl) {
     .xxl\:c {
@@ -128,6 +143,9 @@ $padding-util-variants: (
         $padding-util-variants,
         $layout-spacing-values-map
       );
+    }
+    .xxl\:p-0 {
+      padding: 0;
     }
   }
 }

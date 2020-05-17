@@ -8,12 +8,19 @@ import { MemberThumbnail } from './MemberThumbnail/MemberThumbnail';
 export const Team = () => {
   return (
     <Section border={true}>
-      <section className={classnames(['l-pt-06', 'l-pb-07'])}>
+      <section
+        className={classnames([
+          'l-pt-06',
+          'sm:l-pt-04',
+          'l-pb-07',
+          'sm:l-pb-06',
+        ])}>
         <h1
           className={classnames([
             'font-display',
             'text-h1-display',
             'l-mb-04',
+            styles.sectionHeader,
           ])}>
           team
         </h1>
@@ -34,7 +41,7 @@ export const Team = () => {
               src={evan}
             />
           </div>
-          <div>
+          <div className='l-pt-06 md:p-0'>
             <MemberThumbnail
               text={{
                 bio:

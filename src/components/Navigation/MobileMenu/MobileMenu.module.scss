@@ -1,3 +1,5 @@
+@import '@/scss/global/color/_color-variables.scss';
+
 .menuButtonWrapper {
   display: flex;
   align-items: center;
@@ -9,3 +11,18 @@
   padding: 0;
 }
 
+.mobileMenuList {
+  position: absolute;
+  top: 90px;
+  left: -12px;
+  width: 100%;
+}
+
+.mobileMenuItem {
+  background-color: $orange;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--fz-base);
+  padding: var(--c-02) var(--c-03);
+  margin-bottom: var(--c-04);
+}

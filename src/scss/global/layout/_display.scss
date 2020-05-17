@@ -41,30 +41,48 @@
     .xsm\:d-hidden {
       display: none;
     }
+    .xsm\:d-block {
+      display: block;
+    }
   }
   @include breakpoint(sm) {
     .sm\:d-hidden {
       display: none;
+    }
+    .sm\:d-block {
+      display: block;
     }
   }
   @include breakpoint(md) {
     .md\:d-hidden {
       display: none;
     }
+    .md\:d-block {
+      display: block;
+    }
   }
   @include breakpoint(lg) {
     .lg\:d-hidden {
       display: none;
+    }
+    .lg\:d-block {
+      display: block;
     }
   }
   @include breakpoint(xl) {
     .xl\:d-hidden {
       display: none;
     }
+    .xl\:d-block {
+      display: block;
+    }
   }
   @include breakpoint(xxl) {
     .xxl\:d-hidden {
       display: none;
+    }
+    .xxl\:d-block {
+      display: block;
     }
   }
 }
