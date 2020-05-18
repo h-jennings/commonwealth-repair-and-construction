@@ -9,6 +9,7 @@ export const Team = () => {
   return (
     <Section border={true}>
       <section
+        id='team'
         className={classnames([
           'l-pt-06',
           'sm:l-pt-04',

@@ -1,9 +1,11 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import classnames from 'classnames';
+import { scroller } from 'react-scroll';
 import { motion } from 'framer-motion';
 import styles from './MobileMenu.module.scss';
 import { HamburgerIcon } from '@/components/Icons/HamburgerIcon';
 import { mobileMenuReducer } from './mobile-menu-reducer';
+import { useMobileScroll } from '@/utils/use-scroll';
 
 const mobileMenuContainerVariants = {
   opened: {
@@ -31,13 +33,27 @@ const mobileMenuChildVariants = {
 };
 
 export const MobileMenu = () => {
-  const [state, send] = useReducer(mobileMenuReducer, {
+  const { scrollY } = useMobileScroll();
+  const [{ menuState }, send] = useReducer(mobileMenuReducer, {
     menuState: 'closed',
   });
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (id: string) => {
     send({ type: 'CLOSE' });
+    scroller.scrollTo(id, {
+      duration: 300,
+      smooth: true,
+      offset: -64,
+    });
   };
+
+  // * Close automatically menu if user
+  // scrolls while state is it's 'opened'
+  useEffect(() => {
+    if (menuState !== 'opened') return;
+
+    send({ type: 'CLOSE' });
+  }, [scrollY]);
 
   return (
     <>
@@ -53,24 +69,23 @@ export const MobileMenu = () => {
           'items-end',
           styles.mobileMenuList,
         ])}
-        animate={state.menuState}
+        animate={menuState}
         variants={mobileMenuContainerVariants}
         initial='closed'
-        data-state={state.menuState}>
+        data-state={menuState}>
         <motion.li
-          onClick={() => handleLinkClick()}
+          onClick={() => handleLinkClick('services')}
           variants={mobileMenuChildVariants}
           className={styles.mobileMenuItem}>
           services
         </motion.li>
         <motion.li
-          onClick={() => handleLinkClick()}
+          onClick={() => handleLinkClick('team')}
           variants={mobileMenuChildVariants}
           className={styles.mobileMenuItem}>
           team
         </motion.li>
         <motion.li
-          onClick={() => handleLinkClick()}
           variants={mobileMenuChildVariants}
           className={styles.mobileMenuItem}>
           contact

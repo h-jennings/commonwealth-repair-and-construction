@@ -7,6 +7,7 @@ export const Services = () => {
   return (
     <Section border={true}>
       <section
+        id='services'
         className={classnames([
           'l-pb-07',
           'sm:l-pb-06',

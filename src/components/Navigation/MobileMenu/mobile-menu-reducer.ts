@@ -1,4 +1,10 @@
-import { State, Action } from './mobile-menu-models';
+export type MenuStates = 'opened' | 'closed';
+
+export interface State {
+  menuState: MenuStates;
+}
+
+export type Action = { type: 'TOGGLE' } | { type: 'CLOSE' };
 
 export function mobileMenuReducer(state: State, action: Action): State {
   switch (action.type) {
@@ -19,7 +25,6 @@ export function mobileMenuReducer(state: State, action: Action): State {
       }
     }
     case 'CLOSE': {
-      debugger;
       if (state.menuState === 'closed') return state;
 
       return {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Media from 'react-media';
+import { animateScroll as scroll } from 'react-scroll';
 import classnames from 'classnames';
 import styles from './Navigation.module.scss';
 import { Logo } from '../Logo/Logo';
@@ -8,6 +9,12 @@ import { DesktopMenu } from './DesktopMenu/DesktopMenu';
 
 export const Navigation = () => {
   const breakpoint = '(max-width: 930px)';
+  const handleClick = (): void => {
+    scroll.scrollToTop({
+      duration: 300,
+      smooth: true,
+    });
+  };
 
   return (
     <nav className={classnames(['w-full', 'bg-white', styles.container])}>
@@ -24,9 +31,11 @@ export const Navigation = () => {
           'justify-between',
           styles.content,
         ])}>
-        <div className={classnames([styles.logoWrapper])}>
+        <button
+          onClick={() => handleClick()}
+          className={classnames([styles.button])}>
           <Logo />
-        </div>
+        </button>
         <Media
           queries={{
             mobile: breakpoint,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import classnames from 'classnames';
 import styles from './DesktopMenu.module.scss';
 import { PhoneIcon } from '@/components/Icons/PhoneIcon';
@@ -7,10 +8,24 @@ export const DesktopMenu = () => {
   return (
     <ul className={classnames(['c-space-x-05', 'd-flex', 'items-center'])}>
       <li>
-        <a>services</a>
+        <Link
+          to='services'
+          smooth={true}
+          offset={-89}
+          duration={300}
+          hashSpy={true}>
+          services
+        </Link>
       </li>
       <li>
-        <a>team</a>
+        <Link
+          to='team'
+          smooth={true}
+          offset={-89}
+          duration={300}
+          hashSpy={true}>
+          team
+        </Link>
       </li>
       <li>
         <a>contact</a>
