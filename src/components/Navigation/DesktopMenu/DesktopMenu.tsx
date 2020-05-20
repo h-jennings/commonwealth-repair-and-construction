@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import classnames from 'classnames';
-import styles from './DesktopMenu.module.scss';
 import { PhoneIcon } from '@/components/Icons/PhoneIcon';
+import { Button } from '@/components/Button/Button';
+import { copyToClipboard } from '@/utils/copy-to-clipboard';
 
 export const DesktopMenu = () => {
   return (
@@ -31,12 +32,12 @@ export const DesktopMenu = () => {
         <a>contact</a>
       </li>
       <li>
-        <button className={classnames(['d-flex', 'items-center'])}>
-          <div className={classnames(['c-mr-05', styles.buttonIcon])}>
-            <PhoneIcon />
-          </div>
-          <span>(804) 307-3653</span>
-        </button>
+        <Button
+          clickFn={() => copyToClipboard('(804) 307-3653')}
+          variant='orange'
+          icon={<PhoneIcon />}>
+          (804) 307-3653
+        </Button>
       </li>
     </ul>
   );

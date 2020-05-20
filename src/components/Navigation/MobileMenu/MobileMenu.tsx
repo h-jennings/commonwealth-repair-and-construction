@@ -6,6 +6,8 @@ import styles from './MobileMenu.module.scss';
 import { HamburgerIcon } from '@/components/Icons/HamburgerIcon';
 import { mobileMenuReducer } from './mobile-menu-reducer';
 import { useMobileScroll } from '@/utils/use-scroll';
+import { PhoneIcon } from '@/components/Icons/PhoneIcon';
+import { copyToClipboard } from '@/utils/copy-to-clipboard';
 
 const mobileMenuContainerVariants = {
   opened: {
@@ -38,7 +40,7 @@ export const MobileMenu = () => {
     menuState: 'closed',
   });
 
-  const handleLinkClick = (id: string) => {
+  const navigateToSection = (id: string): void => {
     send({ type: 'CLOSE' });
     scroller.scrollTo(id, {
       duration: 300,
@@ -74,13 +76,13 @@ export const MobileMenu = () => {
         initial='closed'
         data-state={menuState}>
         <motion.li
-          onClick={() => handleLinkClick('services')}
+          onClick={() => navigateToSection('services')}
           variants={mobileMenuChildVariants}
           className={styles.mobileMenuItem}>
           services
         </motion.li>
         <motion.li
-          onClick={() => handleLinkClick('team')}
+          onClick={() => navigateToSection('team')}
           variants={mobileMenuChildVariants}
           className={styles.mobileMenuItem}>
           team
@@ -89,6 +91,17 @@ export const MobileMenu = () => {
           variants={mobileMenuChildVariants}
           className={styles.mobileMenuItem}>
           contact
+        </motion.li>
+        <motion.li
+          variants={mobileMenuChildVariants}
+          className={styles.mobileMenuItem}>
+          <button
+            onClick={() =>
+              copyToClipboard('(804) 307-3653', send({ type: 'CLOSE' }))
+            }
+            style={{ width: 14 }}>
+            <PhoneIcon />
+          </button>
         </motion.li>
       </motion.ul>
     </>

@@ -1,0 +1,11 @@
+@import '@/scss/global/color/_color-variables.scss';
+
+.icon {
+  width: 14px;
+}
+.button[data-variant='orange'] {
+  background-color: $orange;
+}
+.button[data-variant='light'] {
+  background-color: $white;
+}
