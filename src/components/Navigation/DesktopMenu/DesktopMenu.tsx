@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import classnames from 'classnames';
 import { PhoneIcon } from '@/components/Icons/PhoneIcon';
@@ -6,6 +6,22 @@ import { Button } from '@/components/Button/Button';
 import { copyToClipboard } from '@/utils/copy-to-clipboard';
 
 export const DesktopMenu = () => {
+  const phoneNumber = '(804) 307-3653';
+
+  const [buttonTextState, setButtonTextState] = useState(phoneNumber);
+
+  function setClipboardConfirmationState(): void {
+    setButtonTextState('Copied to clipboard!');
+
+    setTimeout(() => {
+      setButtonTextState(phoneNumber);
+    }, 1000);
+  }
+
+  function handleCallButtonClick(): void {
+    copyToClipboard('(804) 307-3653', setClipboardConfirmationState());
+  }
+
   return (
     <ul className={classnames(['c-space-x-05', 'd-flex', 'items-center'])}>
       <li>
@@ -33,10 +49,10 @@ export const DesktopMenu = () => {
       </li>
       <li>
         <Button
-          clickFn={() => copyToClipboard('(804) 307-3653')}
+          clickFn={() => handleCallButtonClick()}
           variant='orange'
           icon={<PhoneIcon />}>
-          (804) 307-3653
+          {buttonTextState}
         </Button>
       </li>
     </ul>

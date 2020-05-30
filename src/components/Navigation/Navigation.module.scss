@@ -1,14 +1,11 @@
 @import '@/scss/global/layout/_media-queries.scss';
 
 .container {
-  position: fixed;
   display: grid;
-  z-index: 10;
   grid-template-columns: minmax(auto, 1680px) minmax(var(--gutter), 1fr);
-}
-
-.content {
-  column-span: 1 / 2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .button {

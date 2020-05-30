@@ -5,17 +5,21 @@
   display: grid;
   grid-template-columns: minmax(auto, 1680px) minmax(var(--gutter), 1fr);
   grid-template-rows: 1fr min-content;
+
   > :not(template) {
     grid-column: 1 / 2;
   }
-}
-.pageContent {
-  margin-top: var(--nav-height);
+
+  // Nav should span full width because it's sticky
+  > :first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @include breakpoint(sm) {
   .page {
     grid-template-columns: minmax(auto, 1680px);
+
     > :not(template) {
       grid-column: 1 / -1;
     }

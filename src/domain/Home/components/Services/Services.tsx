@@ -43,7 +43,7 @@ export const Services = () => {
           </div>
           <div
             className={classnames(['col-span-06', 'col-start-07', styles.col])}>
-            <p className='sm:font-sm'>
+            <p>
               Our projects are planned well, staffed well, and provide a safe
               environment for our clients, design team, and the people who
               perform the work in the field. We know that budget and schedule

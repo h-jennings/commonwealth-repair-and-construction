@@ -12,7 +12,9 @@
   padding: 0;
 }
 
+// Need to clean up
 .mobileMenuList {
+  overflow-x: hidden;
   position: absolute;
   top: 90px;
   left: -12px;

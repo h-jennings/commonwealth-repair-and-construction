@@ -10,16 +10,16 @@
   --fz-xsm-display: #{pxToRem(12px)};
   --fz-sm: #{pxToRem(16px)};
   --fz-sm-display: #{pxToRem(25px)};
-  --fz-base: #{pxToRem(22px)};
-  --fz-base-display: #{pxToRem(34px)};
-  --fz-md: #{pxToRem(32px)};
-  --fz-md-display: #{pxToRem(50px)};
-  --fz-lg: #{pxToRem(45px)};
-  --fz-lg-display: #{pxToRem(70px)};
-  --fz-xl: #{pxToRem(64px)};
-  --fz-xl-display: #{pxToRem(100px)};
-  --fz-super: #{pxToRem(90px)};
-  --fz-super-display: #{pxToRem(140px)};
+  --fz-base: clamp(#{pxToRem(16px)}, 1.5vw, #{pxToRem(22px)});
+  --fz-base-display: clamp(#{pxToRem(25px)}, 2.4vw, #{pxToRem(34px)});
+  --fz-md: clamp(#{pxToRem(22px)}, 2.2vw, #{pxToRem(32px)});
+  --fz-md-display: clamp(#{pxToRem(34px)}, 3.5vw, #{pxToRem(50px)});
+  --fz-lg: clamp(#{pxToRem(32px)}, 3.2vw, #{pxToRem(45px)});
+  --fz-lg-display: clamp(#{pxToRem(50px)}, 4.9vw, #{pxToRem(70px)});
+  --fz-xl: clamp(#{pxToRem(45px)}, 4.4vw, #{pxToRem(64px)});
+  --fz-xl-display: clamp(#{pxToRem(70px)}, 7vw, #{pxToRem(100px)});
+  --fz-super: clamp(#{pxToRem(64px)}, 6.2vw, #{pxToRem(90px)});
+  --fz-super-display: clamp(#{pxToRem(100px)}, 9.7vw, #{pxToRem(140px)});
 
   // Line height
   --lh-display: 0.8;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home } from './domain/Home/Home';
+import { TypeTest } from './components/TypeTest/TypeTest';
 
 export const App = () => {
   return (
@@ -9,7 +10,8 @@ export const App = () => {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Home />
+        {/* <Home /> */}
+        <TypeTest />
       </Switch>
     </Router>
   );
