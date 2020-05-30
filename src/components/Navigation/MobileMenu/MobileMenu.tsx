@@ -75,32 +75,36 @@ export const MobileMenu = () => {
         variants={mobileMenuContainerVariants}
         initial='closed'
         data-state={menuState}>
-        <motion.li
-          onClick={() => navigateToSection('services')}
-          variants={mobileMenuChildVariants}
-          className={styles.mobileMenuItem}>
-          services
-        </motion.li>
-        <motion.li
-          onClick={() => navigateToSection('team')}
-          variants={mobileMenuChildVariants}
-          className={styles.mobileMenuItem}>
-          team
-        </motion.li>
-        <motion.li
-          variants={mobileMenuChildVariants}
-          className={styles.mobileMenuItem}>
-          contact
-        </motion.li>
-        <motion.li
-          variants={mobileMenuChildVariants}
-          className={styles.mobileMenuItem}>
+        <motion.li variants={mobileMenuChildVariants}>
           <button
+            className={styles.mobileMenuButton}
+            onClick={() => navigateToSection('services')}>
+            services
+          </button>
+        </motion.li>
+        <motion.li variants={mobileMenuChildVariants}>
+          <button
+            className={styles.mobileMenuButton}
+            onClick={() => navigateToSection('team')}>
+            team
+          </button>
+        </motion.li>
+        <motion.li variants={mobileMenuChildVariants}>
+          <button
+            className={styles.mobileMenuButton}
+            onClick={() => navigateToSection('services')}>
+            contact
+          </button>
+        </motion.li>
+        <motion.li variants={mobileMenuChildVariants}>
+          <button
+            className={styles.mobileMenuButton}
             onClick={() =>
               copyToClipboard('(804) 307-3653', send({ type: 'CLOSE' }))
-            }
-            style={{ width: 14 }}>
-            <PhoneIcon />
+            }>
+            <div style={{ width: 14 }}>
+              <PhoneIcon />
+            </div>
           </button>
         </motion.li>
       </motion.ul>

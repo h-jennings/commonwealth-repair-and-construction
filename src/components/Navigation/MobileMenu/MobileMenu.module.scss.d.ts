@@ -2,8 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'menuButton': string;
-  'menuButtonWrapper': string;
-  'mobileMenuItem': string;
+  'mobileMenuButton': string;
   'mobileMenuList': string;
 }
 export const cssExports: CssExports;

@@ -22,7 +22,7 @@ export const MemberThumbnail = ({ src, text }: TMemberThumbnail) => {
       className={classnames([
         'd-grid',
         'c-grid-gap-05',
-        'sm:d-block',
+        'xsm:d-block',
         styles.container,
       ])}>
       <h2

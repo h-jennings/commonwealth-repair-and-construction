@@ -3,7 +3,7 @@
 
 .container {
   grid-template-columns: min-content minmax(auto, 350px);
-  @include breakpoint(sm) {
+  @include breakpoint(xsm) {
     display: block;
   }
 }
