@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "dev": "npm run develop",
+    "mobile:dev": "lerna run --parallel mobile:dev",
+    "develop": "lerna run --parallel dev",
+    "start": "npm run develop",
+    "postinstall": "lerna bootstrap",
+    "format": "lerna run format",
+    "studio-deploy": "cd studio && npm run studio-deploy"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.0"
+  }
+}

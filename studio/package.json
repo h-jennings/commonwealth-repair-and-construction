@@ -7,6 +7,9 @@
   "author": "Hunter Jennings <jenningsdhunter@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "dev": "sanity start",
+    "mobile:dev": "npm run dev",
+    "studio-deploy": "sanity deploy",
     "start": "sanity start",
     "test": "sanity check"
   },
