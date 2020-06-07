@@ -19,7 +19,7 @@ export const DesktopMenu = () => {
   }
 
   function handleCallButtonClick(): void {
-    copyToClipboard('(804) 307-3653', setClipboardConfirmationState());
+    copyToClipboard('(804) 307-3653', setClipboardConfirmationState);
   }
 
   return (
@@ -45,7 +45,14 @@ export const DesktopMenu = () => {
         </Link>
       </li>
       <li>
-        <a>contact</a>
+        <Link
+          to='contact'
+          smooth={true}
+          offset={-89}
+          duration={300}
+          hashSpy={true}>
+          contact
+        </Link>
       </li>
       <li>
         <Button

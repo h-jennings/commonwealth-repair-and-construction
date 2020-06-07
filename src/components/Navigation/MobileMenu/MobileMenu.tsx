@@ -92,7 +92,7 @@ export const MobileMenu = () => {
         <motion.li variants={mobileMenuChildVariants}>
           <button
             className={styles.mobileMenuButton}
-            onClick={() => navigateToSection('services')}>
+            onClick={() => navigateToSection('contact')}>
             contact
           </button>
         </motion.li>
