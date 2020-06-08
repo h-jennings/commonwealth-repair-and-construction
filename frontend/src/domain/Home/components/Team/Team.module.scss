@@ -20,6 +20,12 @@
   }
 }
 
+.thumbnailContainer {
+  > :nth-child(even) {
+    padding-top: var(--l-05);
+  }
+}
+
 @include breakpoint(md) {
   div.thumbnailContainer {
     flex-flow: column nowrap;

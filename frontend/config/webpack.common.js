@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const glob = require('glob');
 const paths = require('./paths');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 // Processing TS files
 const configureTSLoader = () => ({
@@ -109,6 +110,7 @@ module.exports = {
       template: `${paths.static}/template.html`,
       filename: 'index.html',
     }),
+    new Dotenv(),
   ],
   module: {
     rules: [

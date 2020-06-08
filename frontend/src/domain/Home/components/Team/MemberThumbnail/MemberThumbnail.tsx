@@ -5,7 +5,7 @@ import styles from './MemberThumbnail.module.scss';
 type TThumbnailTextContent = {
   role: string;
   name: string;
-  bio: string;
+  bio: any;
 };
 
 type TMemberThumbnail = {
@@ -61,9 +61,7 @@ export const MemberThumbnail = ({ src, text }: TMemberThumbnail) => {
             </h3>
           </div>
         </div>
-        <p className={classnames(['font-sm', 'c-pl-04', styles.bio])}>
-          {text.bio}
-        </p>
+        {text.bio}
       </div>
     </figure>
   );
