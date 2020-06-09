@@ -8,7 +8,7 @@
     "start": "npm run develop",
     "postinstall": "lerna bootstrap",
     "format": "lerna run format",
-    "studio-deploy": "cd studio && npm run studio-deploy"
+    "sanity-deploy": "cd sanity && npm run sanity-deploy"
   },
   "devDependencies": {
     "lerna": "^3.22.0"

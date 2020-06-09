@@ -1,4 +1,4 @@
 {
-  "packages": ["frontend", "studio"],
+  "packages": ["frontend", "sanity"],
   "version": "0.0.0"
 }
