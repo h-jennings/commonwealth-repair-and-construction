@@ -95,7 +95,8 @@
     font-size: var(--fz-base);
     font-weight: 400;
     line-height: var(--lh-md);
-    &.display {
+
+    .display {
       font-size: var(--fz-base-display);
     }
   }

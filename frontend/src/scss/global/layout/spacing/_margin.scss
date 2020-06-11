@@ -47,6 +47,26 @@ $margin-util-variants: (
     );
   }
 
+  // * Responsive Margin Utilities
+
+  @include breakpoint(sm) {
+    .sm\:c {
+      @include generateSpacingUtils(
+        $margin-util-variants,
+        $component-spacing-values-map
+      );
+    }
+    .sm\:l {
+      @include generateSpacingUtils(
+        $margin-util-variants,
+        $layout-spacing-values-map
+      );
+    }
+    .sm\:m-0 {
+      margin: 0;
+    }
+  }
+
   /*
   
   * Auto Margin Utilities :

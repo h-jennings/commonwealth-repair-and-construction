@@ -29,7 +29,7 @@ export const Contact = () => {
             'sm:d-block',
             'grid-content-primary',
           ])}>
-          <div className={classnames(['col-span-05'])}>
+          <div className={classnames(['col-span-05', 'sm:l-mb-04'])}>
             <h2
               className={classnames([
                 'font-display',

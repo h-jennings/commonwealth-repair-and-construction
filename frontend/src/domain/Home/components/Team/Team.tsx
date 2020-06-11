@@ -3,11 +3,11 @@ import classnames from 'classnames';
 import useSwr from 'swr';
 import groq from 'groq';
 import styles from './Team.module.scss';
-import evan from '@/images/evan.jpg';
 import { Section } from '@/components/Section/Section';
 import { MemberThumbnail } from './MemberThumbnail/MemberThumbnail';
 import { client } from '@/utils/client';
 import BlockContent from '@sanity/block-content-to-react';
+import { urlFor } from '@/utils/image-builder';
 
 interface IEmployee {
   _id: string;
@@ -15,6 +15,7 @@ interface IEmployee {
   firstName: string;
   lastName: string;
   bio: any;
+  image?: any;
 }
 
 const serializer = {
@@ -38,9 +39,8 @@ export const Team = () => {
     console.log(employees);
   }, [employees]);
 
-  // Improve loading states
+  // Improve future loading states
   if (error) return <div>Failed</div>;
-  if (!employees) return <div>Loading...</div>;
 
   return (
     <Section border={true}>
@@ -51,6 +51,7 @@ export const Team = () => {
           'sm:l-pt-04',
           'l-pb-07',
           'sm:l-pb-06',
+          styles.section,
         ])}>
         <h1
           className={classnames([
@@ -63,25 +64,55 @@ export const Team = () => {
         </h1>
         <div
           className={classnames([
-            'd-flex',
-            'l-space-x-05',
+            'd-grid',
+            'l-grid-gap-05',
             styles.thumbnailContainer,
           ])}>
-          {employees.map((employee: IEmployee) => {
-            const { role, _id, firstName, lastName, bio } = employee;
-            return (
-              <div key={_id}>
-                <MemberThumbnail
-                  text={{
-                    bio: <BlockContent blocks={bio} serializers={serializer} />,
-                    name: `${firstName} ${lastName}`,
-                    role,
-                  }}
-                  src={evan}
-                />
-              </div>
-            );
-          })}
+          {employees &&
+            employees.map((employee: IEmployee) => {
+              const {
+                role,
+                _id,
+                firstName,
+                lastName,
+                bio,
+                image = null,
+              } = employee;
+              return (
+                <div key={_id}>
+                  <MemberThumbnail
+                    text={{
+                      bio: (
+                        <BlockContent blocks={bio} serializers={serializer} />
+                      ),
+                      name: `${firstName} ${lastName}`,
+                      role,
+                    }}
+                    src={urlFor(image).maxWidth(460).url()}
+                  />
+                </div>
+              );
+            })}
+          <div>
+            <MemberThumbnail
+              text={{
+                bio: <p>testing 123</p>,
+                name: `first last`,
+                role: 'plumber',
+              }}
+              src={null}
+            />
+          </div>
+          <div>
+            <MemberThumbnail
+              text={{
+                bio: <p>testing 123</p>,
+                name: `first last`,
+                role: 'foreman',
+              }}
+              src={null}
+            />
+          </div>
         </div>
       </section>
     </Section>

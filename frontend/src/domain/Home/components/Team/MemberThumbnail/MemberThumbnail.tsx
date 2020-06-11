@@ -9,7 +9,7 @@ type TThumbnailTextContent = {
 };
 
 type TMemberThumbnail = {
-  src: string;
+  src: string | null;
   text: TThumbnailTextContent;
 };
 
@@ -22,16 +22,16 @@ export const MemberThumbnail = ({ src, text }: TMemberThumbnail) => {
       className={classnames([
         'd-grid',
         'c-grid-gap-05',
-        'xsm:d-block',
+        'md:d-block',
         styles.container,
       ])}>
       <h2
         className={classnames([
           'text-right',
-          'sm:text-left',
+          'md:text-left',
           'font-bold',
           'font-sm',
-          'sm:c-pb-05',
+          'md:c-pb-05',
           styles.role,
         ])}>
         {text.role}

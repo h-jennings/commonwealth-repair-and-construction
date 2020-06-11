@@ -1,3 +1,5 @@
+import { image } from './image';
+
 export const employee = {
   name: 'employee',
   type: 'document',
@@ -13,6 +15,7 @@ export const employee = {
       type: 'string',
       title: 'Last Name',
     },
+    image,
     {
       name: 'role',
       type: 'string',

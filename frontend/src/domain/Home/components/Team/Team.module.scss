@@ -1,6 +1,10 @@
 @import '@/scss/global/color/_color-variables.scss';
 @import '@/scss/global/layout/_media-queries.scss';
 
+.section {
+  overflow: hidden;
+}
+
 .sectionHeader::after {
   content: 'founded \A 2020';
   white-space: pre;
@@ -18,25 +22,48 @@
   @include breakpoint(md) {
     content: '';
   }
+
+  @include breakpoint(sm) {
+    content: ' (swipe right)';
+    font-size: var(--fz-xsm);
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    text-align: left;
+    line-height: 1;
+    position: relative;
+    top: unset;
+    left: unset;
+    opacity: 1;
+    color: $black;
+    pointer-events: none;
+  }
 }
 
 .thumbnailContainer {
+  // flex-flow: row wrap;
+  // max-width: 913px;
+  grid-template-columns: repeat(2, minmax(auto, 430px));
+
+  > :nth-child(odd) {
+    padding-top: 0;
+  }
   > :nth-child(even) {
     padding-top: var(--l-05);
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(sm) {
   div.thumbnailContainer {
-    flex-flow: column nowrap;
-    align-items: center;
+    overflow-x: scroll;
+    display: flex;
+    gap: unset;
 
     > :not(template) {
-      margin: 0;
+      margin-right: var(--l-05);
+    }
 
-      &:first-of-type {
-        margin-bottom: var(--l-05);
-      }
+    > :nth-child(even) {
+      padding: 0;
     }
   }
 }

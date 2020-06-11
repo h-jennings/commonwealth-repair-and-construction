@@ -42,7 +42,7 @@ export const Services = () => {
               className='bg-orange'></div>
           </div>
           <div
-            className={classnames(['col-span-06', 'col-start-07', styles.col])}>
+            className={classnames(['col-span-05', 'col-start-07', styles.col])}>
             <p>
               Our projects are planned well, staffed well, and provide a safe
               environment for our clients, design team, and the people who
