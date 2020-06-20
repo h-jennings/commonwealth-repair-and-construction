@@ -1,6 +1,13 @@
 import React from 'react';
-import styles from './Footer.module.scss';
+import classnames from 'classnames';
+/* import styles from './Footer.module.scss'; */
 
 export const Footer = () => {
-  return <footer className={styles.footer}>footer!</footer>;
+  return (
+    <footer className={classnames(['bg-black', 'c-p-08'])}>
+      <div className={classnames(['border-t-white', 'text-white'])}>
+        This is a the footer
+      </div>
+    </footer>
+  );
 };

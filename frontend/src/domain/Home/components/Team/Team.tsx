@@ -31,13 +31,10 @@ const serializer = {
 export const Team = () => {
   const query = groq`*[_type == "employee"] | order(firstName)`;
 
+  // querying data from sanity
   const { data: employees, error } = useSwr(query, (q) => {
     return client.fetch(q);
   });
-
-  useEffect(() => {
-    console.log(employees);
-  }, [employees]);
 
   // Improve future loading states
   if (error) return <div>Failed</div>;
@@ -93,26 +90,6 @@ export const Team = () => {
                 </div>
               );
             })}
-          <div>
-            <MemberThumbnail
-              text={{
-                bio: <p>testing 123</p>,
-                name: `first last`,
-                role: 'plumber',
-              }}
-              src={null}
-            />
-          </div>
-          <div>
-            <MemberThumbnail
-              text={{
-                bio: <p>testing 123</p>,
-                name: `first last`,
-                role: 'foreman',
-              }}
-              src={null}
-            />
-          </div>
         </div>
       </section>
     </Section>

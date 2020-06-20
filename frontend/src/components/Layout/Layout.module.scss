@@ -14,6 +14,10 @@
   > :first-child {
     grid-column: 1 / -1;
   }
+
+  > :last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @include breakpoint(sm) {

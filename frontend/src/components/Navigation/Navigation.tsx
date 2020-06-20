@@ -7,6 +7,7 @@ import { Logo } from '../Logo/Logo';
 import { MobileMenu } from './MobileMenu/MobileMenu';
 import { DesktopMenu } from './DesktopMenu/DesktopMenu';
 
+// TODO: NEED TO MAKE SURE NAV LINKS ARE 'TABABLE'
 export const Navigation = () => {
   const breakpoint = '(max-width: 930px)';
   const handleClick = (): void => {
@@ -33,6 +34,7 @@ export const Navigation = () => {
         ])}>
         <button
           onClick={() => handleClick()}
+          aria-label='logo'
           className={classnames([styles.button])}>
           <Logo />
         </button>

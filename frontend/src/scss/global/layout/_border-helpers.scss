@@ -5,6 +5,9 @@
   .border-l-orange {
     border-left: 2px solid $orange;
   }
+  .border-t-white {
+    border-top: 1px solid $white;
+  }
   .border-black-full {
     position: relative;
     &::after {
