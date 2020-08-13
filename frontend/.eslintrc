@@ -9,15 +9,17 @@
     "plugin:import/typescript",
     "plugin:import/errors",
     "plugin:import/warnings",
+    "prettier/react",
+    "plugin:jest/recommended",
     "plugin:prettier/recommended",
-    "prettier/react"
   ],
   "plugins": ["import"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
-      "modules": true
+      "modules": true,
+      "jsx": true
     }
   },
   "rules": {
@@ -33,7 +35,7 @@
     ],
     "jsx-a11y/anchor-is-valid": "off",
     "no-console": 1,
-    "react/prop-types": 0
+    "react/prop-types": 0,
   },
   "settings": {
     "import/resolver": {
