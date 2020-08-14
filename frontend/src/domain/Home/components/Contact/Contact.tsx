@@ -40,7 +40,8 @@ export const Contact = () => {
             </h2>
             <p className='c-mb-06'>
               Tell us the nature of your business, how we can help, your timing,
-              and we'll get back to you with an estimate as soon as we can.
+              and we&rsquo;ll get back to you with an estimate as soon as we
+              can.
             </p>
             <Button variant='orange'>Request a quote</Button>
           </div>
