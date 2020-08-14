@@ -9,6 +9,7 @@
     "postinstall": "lerna bootstrap",
     "format": "lerna run format",
     "sanity-deploy": "cd sanity && npm run sanity-deploy",
+    "build": "lerna run --parallel build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-and-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prettier-format": "prettier --config .prettierrc 'frontend/**/*.{ts, .tsx, .js, .jsx}' --write"
