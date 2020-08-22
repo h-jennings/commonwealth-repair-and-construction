@@ -7,25 +7,37 @@ import { MobileMenu } from './MobileMenu';
 test('Mobile opens and closes from button click', async () => {
   render(<MobileMenu />);
 
+  const closedTransformValue = 'translateX(100%) translateZ(0)';
+  const openedTransformValue = 'translateX(0%) translateZ(0)';
+
   const menuList = screen.getByRole('list');
   const menuItems = screen.getAllByRole('listitem');
   const menuButton = screen.getByRole('button', { name: 'Mobile menu button' });
-  const closedTransformValue = 'transform: translateX(100%) translateZ(0)';
-  const openedTransformValue = 'transform: translateX(0%) translateZ(0)';
 
   // Initial State
   expect(menuList).toHaveAttribute('data-state', 'closed');
-  expect(menuItems[0]).toHaveStyle(closedTransformValue);
+  menuItems.forEach((menuItem) => {
+    expect(menuItem.style.transform).toBe(closedTransformValue);
+  });
 
   // Opened State
   userEvent.click(menuButton);
   expect(menuList).toHaveAttribute('data-state', 'opened');
-  await waitFor(() => expect(menuItems[0]).toHaveStyle(openedTransformValue));
+  await waitFor(() => {
+    menuItems.forEach((menuItem) => {
+      expect(menuItem.style.transform).toBe(openedTransformValue);
+    });
+  });
 
   // Closed State
   userEvent.click(menuButton);
   expect(menuList).toHaveAttribute('data-state', 'closed');
-  await waitFor(() => expect(menuItems[0]).toHaveStyle(closedTransformValue));
+  await waitFor(() => {
+    menuItems.forEach((menuItem) => {
+      expect(menuItem.style.transform).toBe(closedTransformValue);
+    });
+  });
 });
 
 // TODO: Add test for touchmove
+// TODO: Add test for close after list item click

@@ -18,15 +18,6 @@
     "typescript"
   ],
   "license": "ISC",
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules",
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
-    "setupFiles": [
-      "<rootDir>/src/setupJest.js"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",

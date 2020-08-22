@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 /**
  * fix: `matchMedia` not present, legacy browsers require a polyfill
  */
