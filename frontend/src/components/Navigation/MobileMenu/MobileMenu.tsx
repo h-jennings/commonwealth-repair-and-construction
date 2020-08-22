@@ -60,6 +60,7 @@ export const MobileMenu = () => {
   return (
     <>
       <button
+        aria-label='Mobile menu button'
         className={classnames([styles.menuButton])}
         onClick={() => send({ type: 'TOGGLE' })}>
         <HamburgerIcon />
