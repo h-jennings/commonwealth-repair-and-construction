@@ -5,7 +5,13 @@ import userEvent from '@testing-library/user-event';
 import { MobileMenu } from './MobileMenu';
 
 const setup = () => {
-  render(<MobileMenu />);
+  const componentContainer = document.createElement('div');
+  const divWithServicesId = document.createElement('div');
+  divWithServicesId.id = 'services';
+  componentContainer.appendChild(divWithServicesId);
+  render(<MobileMenu />, {
+    baseElement: document.body.appendChild(componentContainer),
+  });
 
   const closedTransformValue = 'translateX(100%) translateZ(0)';
   const openedTransformValue = 'translateX(0%) translateZ(0)';
@@ -57,7 +63,6 @@ test('Mobile opens and closes from button click', async () => {
   });
 });
 
-// TODO: Add test for touchmove
 test('Mobile opens and closes from touchmove', async () => {
   const utils = setup();
   const { closedTransformValue } = utils.vars;
@@ -77,4 +82,28 @@ test('Mobile opens and closes from touchmove', async () => {
     });
   });
 });
-// TODO: Add test for close after list item click
+
+test('Mobile opens and closes from list link click', async () => {
+  const utils = setup();
+  const { closedTransformValue } = utils.vars;
+  const { menuList, menuItems, menuButton } = utils.elements;
+  const menuListItemButton = await screen.findByRole('button', {
+    name: /services/i,
+  });
+
+  // Open Menu
+  userEvent.click(menuButton);
+
+  // Click on list item
+  userEvent.click(menuListItemButton);
+
+  // Should close menu
+  await waitFor(() => {
+    expect(menuList).toHaveAttribute('data-state', 'closed');
+  });
+  await waitFor(() => {
+    menuItems.forEach((menuItem) => {
+      expect(menuItem.style.transform).toBe(closedTransformValue);
+    });
+  });
+});

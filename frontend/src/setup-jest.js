@@ -11,3 +11,5 @@ global.matchMedia =
       removeListener: function () {},
     };
   };
+
+global.scrollTo = jest.fn();
