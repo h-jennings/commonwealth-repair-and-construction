@@ -1,10 +1,10 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
-import { screen, render, waitFor } from '@testing-library/react';
+import { screen, render, waitFor, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MobileMenu } from './MobileMenu';
 
-test('Mobile opens and closes from button click', async () => {
+const setup = () => {
   render(<MobileMenu />);
 
   const closedTransformValue = 'translateX(100%) translateZ(0)';
@@ -13,6 +13,24 @@ test('Mobile opens and closes from button click', async () => {
   const menuList = screen.getByRole('list');
   const menuItems = screen.getAllByRole('listitem');
   const menuButton = screen.getByRole('button', { name: 'Mobile menu button' });
+
+  return {
+    vars: {
+      closedTransformValue,
+      openedTransformValue,
+    },
+    elements: {
+      menuList,
+      menuItems,
+      menuButton,
+    },
+  };
+};
+
+test('Mobile opens and closes from button click', async () => {
+  const utils = setup();
+  const { closedTransformValue, openedTransformValue } = utils.vars;
+  const { menuList, menuItems, menuButton } = utils.elements;
 
   // Initial State
   expect(menuList).toHaveAttribute('data-state', 'closed');
@@ -40,4 +58,23 @@ test('Mobile opens and closes from button click', async () => {
 });
 
 // TODO: Add test for touchmove
+test('Mobile opens and closes from touchmove', async () => {
+  const utils = setup();
+  const { closedTransformValue } = utils.vars;
+  const { menuList, menuItems, menuButton } = utils.elements;
+
+  // Opened Menu
+  userEvent.click(menuButton);
+
+  // Close from touchmove
+  fireEvent.touchMove(document.body);
+  await waitFor(() => {
+    expect(menuList).toHaveAttribute('data-state', 'closed');
+  });
+  await waitFor(() => {
+    menuItems.forEach((menuItem) => {
+      expect(menuItem.style.transform).toBe(closedTransformValue);
+    });
+  });
+});
 // TODO: Add test for close after list item click

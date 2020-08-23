@@ -52,9 +52,16 @@ export const MobileMenu = () => {
   // * Close automatically menu if user
   // scrolls while state is it's 'opened'
   useEffect(() => {
+    let mounted = true;
     if (menuState !== 'opened') return;
 
-    send({ type: 'CLOSE' });
+    if (mounted) {
+      send({ type: 'CLOSE' });
+    }
+
+    return (): void => {
+      mounted = false;
+    };
   }, [scrollY]);
 
   return (
